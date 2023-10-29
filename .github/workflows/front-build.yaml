@@ -11,14 +11,14 @@ jobs:
       - name: Checkout source code
         uses: actions/checkout@v4
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+
       - name: Install Dependencies
         run: yarn
 
       - name: Build
         run: yarn build
-        env:
-          VITE_URL: ${{ secrets.VITE_URL }}
-          REACT_APP_REDIRECT_URI: ${{ secrets.REACT_APP_REDIRECT_URI }}
 
       - name: S3 Deploy
         run: aws s3 sync ./dist s3://s3-cloudfront-cicd-test/ --acl bucket-owner-full-control
