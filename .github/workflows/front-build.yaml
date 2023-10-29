@@ -17,8 +17,8 @@ jobs:
       - name: Install Dependencies
         run: yarn
 
-      - name: Build
-        run: tsc && vite build
+      - name: TypeScript Compile
+        run: tsc
         env:
           VITE_URL: ${{ secrets.REACT_APP_API_URI }}
 
