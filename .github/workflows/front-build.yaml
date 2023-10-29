@@ -23,6 +23,6 @@ jobs:
       - name: S3 Deploy
         run: aws s3 sync ./dist s3://s3-cloudfront-cicd-test --acl bucket-owner-full-control
         env:
-          AWS_ACCESS_KEY_ID: AKIAXLCU6R3WIK72ACMJ
-          AWS_SECRET_ACCESS_KEY: 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
+          AWS_ACCESS_KEY_ID: AKIAXLCU6R3WAKHXB3MP
+          AWS_SECRET_ACCESS_KEY: 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
           AWS_REGION: ap-northeast-2
