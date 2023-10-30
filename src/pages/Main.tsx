@@ -1,7 +1,7 @@
 import React from "react";
 
 const Main = () => {
-  return <div>main 화이팅!! 왜 캐싱안되고 배포 되는거지...?</div>;
+  return <div>main 화이팅!! 무효화 성공길만 걸어</div>;
 };
 
 export default Main;
